@@ -2,10 +2,6 @@
 
 Aplikasi mobile untuk pelanggan restoran Pondok Nusantara. Memungkinkan pengguna login, melihat menu, dan melakukan pemesanan secara realtime. Dibangun dengan **Flutter** dan **MobX**.
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![MobX](https://img.shields.io/badge/MobX-FF9955?style=for-the-badge&logo=mobx&logoColor=white)
-
 ## 📱 Fitur Aplikasi
 
 - **Google Sign-In:** Login instan tanpa password.
@@ -22,6 +18,50 @@ Aplikasi mobile untuk pelanggan restoran Pondok Nusantara. Memungkinkan pengguna
 ## 📦 Panduan Instalasi
 
 1. **Clone Repository**
-   ```bash
-   git clone [https://github.com/username-anda/restaurant-mobile.git](https://github.com/username-anda/restaurant-mobile.git)
-   cd restaurant-mobile
+    git clone https://github.com/aawzyy/restaurant-mobile.git
+    cd restaurant-mobile
+
+2. **Install Dependencies**
+    flutter pub get
+
+3. **Generate MobX Code Jalankan ini setiap kali ada perubahan pada file Store (.g.dart)**
+    flutter pub run build_runner build --delete-conflicting-outputs
+
+## ⚙️ Konfigurasi API
+
+Buka file lib/core/constants/api_constants.dart (atau file konfigurasi Anda) dan sesuaikan URL Backend:
+
+    class ApiConstants {
+    // Ganti dengan IP Address Laptop Anda (bukan localhost) jika pakai Emulator/HP
+    // Contoh: 192.168.1.5
+    static const String baseUrl = "http://10.0.2.2:8000/api"; 
+    }
+
+## 🔑 Setup Google Sign-In (Firebase/OAuth)
+
+Agar Google Login berfungsi di Android:
+    
+1. **Dapatkan SHA-1 Fingerprint dari keystore debug Anda:**
+    cd android
+    ./gradlew signingReport
+
+2. **Daftarkan SHA-1 tersebut di Google Cloud Console (Credentials > OAuth 2.0 Client IDs > Android)**
+
+## 🏃‍♂️ Menjalankan Aplikasi
+Pastikan Emulator menyala atau HP terhubung.
+
+    flutter run
+
+## 📂 Struktur Project
+
+    lib/core: Konfigurasi global, DI (GetIt), Network client.
+
+    lib/features: Modul fitur (Auth, Menu, Order).
+
+        presentation: UI (Screens, Widgets) & State Management (MobX).
+
+        domain: UseCases & Entities.
+
+        data: Repositories & API Services.
+
+**Dibuat oleh Muhammad Fauzi Osama.**
