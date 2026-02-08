@@ -32,9 +32,9 @@ Aplikasi mobile untuk pelanggan restoran Pondok Nusantara. Memungkinkan pengguna
 Buka file lib/core/constants/api_constants.dart (atau file konfigurasi Anda) dan sesuaikan URL Backend:
 
     class ApiConstants {
-    // Ganti dengan IP Address Laptop Anda (bukan localhost) jika pakai Emulator/HP
-    // Contoh: 192.168.1.5
-    static const String baseUrl = "http://10.0.2.2:8000/api"; 
+        // Ganti dengan IP Address Laptop Anda (bukan localhost) jika pakai Emulator/HP
+        // Contoh: 192.168.1.5
+        static const String baseUrl = "http://10.0.2.2:8000/api"; 
     }
 
 ## 🔑 Setup Google Sign-In (Firebase/OAuth)
@@ -42,7 +42,9 @@ Buka file lib/core/constants/api_constants.dart (atau file konfigurasi Anda) dan
 Agar Google Login berfungsi di Android:
     
 1. **Dapatkan SHA-1 Fingerprint dari keystore debug Anda:**
+    flutter create .
     cd android
+    chmod +x gradlew
     ./gradlew signingReport
 
 2. **Daftarkan SHA-1 tersebut di Google Cloud Console (Credentials > OAuth 2.0 Client IDs > Android)**
