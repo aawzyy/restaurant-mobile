@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 20),
             const Text(
-              "Pondok Nusantara",
+              "Restaurant App",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w900,

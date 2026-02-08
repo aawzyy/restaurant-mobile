@@ -85,7 +85,7 @@ class _MenuListScreenState extends State<MenuListScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Pondok Nusantara",
+              "Restaurant App",
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 20,

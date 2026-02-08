@@ -1,6 +1,6 @@
-# 📱 Pondok Nusantara - Mobile App
+# 📱 Mobile App
 
-Aplikasi mobile untuk pelanggan restoran Pondok Nusantara. Memungkinkan pengguna login, melihat menu, dan melakukan pemesanan secara realtime. Dibangun dengan **Flutter** dan **MobX**.
+Aplikasi mobile untuk pelanggan restoran. Memungkinkan pengguna login, melihat menu, dan melakukan pemesanan secara realtime. Dibangun dengan **Flutter** dan **MobX**.
 
 ## 📱 Fitur Aplikasi
 
